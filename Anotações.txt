@@ -1,0 +1,56 @@
+Anotações
+node.js(platarforma) ele faz com que a gente consigua utilizar js 
+em backend,no servidor tratar requisições, trabalhar com o BD
+
+
+MVC- MODAL ... CONTROL
+É quando cria a parte visual junto com o backend, EX: WORDPRESS
+
+API rest
+A aplicação de frontend é separada do backend, ela oferece uma 
+flexibilidade maior, com uma unica api para diferentes platarformas
+BACKEND - NODE.js
+frontend - REACT, REACT NAVE
+
+Pra desenvolver com node.js
+1- instalar
+    terminal :
+        $ node -v
+        $ npm -v
+        $ npm init -y, para inicializar e criar o arquivo package.json
+
+2- depedências:
+    $ npm install express
+        - no package.json,instalou a depedência express, que vai ajudar a lidar com rotas(endereços,url) e views(forma de visualização)
+
+3- atualizar automaticamente
+    $ npm install -D nodemon
+        - ele instalar devDepedencias(depedencias que só vai utilizar no ambiente de dev) no package.json
+
+4- rodar a aplicação
+    sem o script do nodemon:
+        $ node server.js
+    com o script do nodemon no package.json:
+        $ npm run dev , dev é o nome do script
+
+5- docker
+    serve para fazer a containerização de recursos de softwares, vai utilizar uma maquina virtual que vai rodar 
+    as aplicações sem precisar instalar na maquina real 
+    - instalar
+    $ docker , para confirmar se está ok
+    $ docker pull mongo , baixar a maquina virtual do banco mongoDB
+    $ docker run --name mongodb -p 27017:27017 -d mongo, baixando uma nova MV com o banco mongoDB e esse -p indica a porta em que a minha maquina
+    vai acessar com a maquina virtual(minha 27107), virtual(27107), o -d mongo(nome da imagem), dizendo qual img mongo estou usando
+    $ docker ps , rodando a imagem que estão onlina
+    $ docker ps - a , para ver quais imagens não estão rodando
+    $ docker start nomeDaImagem , colocar a imagem de novo online
+
+6 - instalar robo 3t
+    - criar uma conexão, dá um nome e o endereço: adress: localhost , port: 27017
+    - ele vai servir para verificar se estão persisitindo os dados
+7 - instalar mongoose
+    $ npm install mongoose , orm ele meio que possibilita a gente fazer um CRUD sem utilizar a linguagem SQL
+    transformar as tabelas em objetos para utilizar no JS
+
+8 - biblioteca model
+    $npm install require-dir , faz os requires em todos os arquivos automaticamente
